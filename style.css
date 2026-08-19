@@ -1172,6 +1172,25 @@ figcaption small {
   overflow: visible;
 }
 
+/* Keep the process cards comfortably sized on large displays instead of
+   letting their fixed inline margins dictate the layout. */
+@media (min-width: 1200px) {
+  #process > div:first-child,
+  #process > div:not(:first-child) {
+    width: min(1472px, calc(100% - clamp(96px, 9vw, 232px)));
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+  #process > div:first-child {
+    margin-bottom: 64px !important;
+  }
+
+  #process > div:not(:first-child) {
+    margin-bottom: 56px !important;
+  }
+}
+
 .process-head small,
 .impact-head small,
 .orange {
@@ -2538,4 +2557,49 @@ figcaption small {
   .impact-art-row span[style*="width: 270px"] {
     width: auto !important;
   }
+}
+
+/* Process cards and their floating step pills scale from phone to XL screens. */
+#process > div:first-child,
+#process > div:not(:first-child) {
+  box-sizing: border-box;
+  width: min(1472px, calc(100% - clamp(32px, 6vw, 232px)));
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+#process > div:not(:first-child) > div:first-child {
+  min-width: 0;
+  border-radius: clamp(24px, 2.6vw, 37px) !important;
+  padding: clamp(38px, 4vw, 48px) clamp(18px, 3.75vw, 45px) !important;
+  background-size: cover !important;
+}
+
+#process > div:not(:first-child) > div:first-child > div {
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+#process > div:not(:first-child) > div:first-child > div > div,
+#process > div:not(:first-child) > div:first-child > div > span {
+  min-width: 0;
+}
+
+#process > div:not(:first-child) > div:first-child > div > span {
+  font-size: clamp(16px, 1.65vw, 20px) !important;
+  overflow-wrap: anywhere;
+}
+
+#process > div:not(:first-child) > span {
+  box-sizing: border-box;
+  left: clamp(30px, 8vw, 97px) !important;
+  top: clamp(-29px, -2.4vw, -20px) !important;
+  max-width: calc(100% - 48px);
+  padding: clamp(4px, 0.45vw, 5px) clamp(22px, 3.5vw, 43px) !important;
+  border-radius: 999px !important;
+  white-space: nowrap;
+}
+
+#process > div:not(:first-child) > span > span {
+  font-size: clamp(17px, 2vw, 24px) !important;
 }
