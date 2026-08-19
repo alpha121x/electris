@@ -2603,3 +2603,93 @@ figcaption small {
 #process > div:not(:first-child) > span > span {
   font-size: clamp(17px, 2vw, 24px) !important;
 }
+
+/* Final responsive safety net for the Figma-exported inline dimensions. */
+main,
+section,
+.site-frame {
+  min-width: 0;
+  max-width: 100%;
+}
+
+p,
+span,
+a,
+h1,
+h2,
+h3 {
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 991px) {
+  #process > div:first-child,
+  #process > div:not(:first-child) {
+    width: calc(100% - 48px);
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero-actions {
+    width: calc(100vw - 32px);
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .hero-actions .btn {
+    padding-right: 18px !important;
+    padding-left: 18px !important;
+  }
+
+  #process > div:first-child,
+  #process > div:not(:first-child) {
+    width: calc(100% - 32px);
+  }
+
+  #process > div:not(:first-child) > div:first-child > div > div {
+    width: 100%;
+  }
+
+  #process > div:not(:first-child) > div:first-child > div > div > span:last-child {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .impact-art-row > div {
+    padding: 28px 22px !important;
+    min-height: 420px !important;
+  }
+
+  .impact-art-row > div > img[style*="position: absolute"] {
+    max-width: 58% !important;
+    height: auto !important;
+  }
+
+  .footer-panel {
+    width: calc(100% - 16px);
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 359px) {
+  .logo img {
+    width: 145px;
+  }
+
+  .hero-copy {
+    right: 18px;
+    left: 18px;
+  }
+
+  .hero h1 {
+    font-size: 29px;
+  }
+
+  .contact-card {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
