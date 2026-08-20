@@ -1509,10 +1509,13 @@
                   display: flex;
                   flex-direction: column;
                   align-items: flex-start;
-                  background: linear-gradient(180deg, #b2ffda, #88d2af);
-                  border-radius: 33px;
-                  border: 8px solid #f1f5f9;
-                  padding-top: 10px;
+	                  background: linear-gradient(180deg, #b2ffda, #88d2af);
+	                  border-radius: 33px;
+	                  border: 8px solid #f1f5f9;
+	                  height: 476px;
+	                  box-sizing: border-box;
+	                  overflow: hidden;
+	                  padding-top: 10px;
                   padding-bottom: 10px;
                   position: relative;
                 "
@@ -1520,16 +1523,19 @@
                 <img
                   src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/wteuzt38_expires_30_days.png"
                   style="
-                    border-radius: 33px;
-                    width: 554px;
-                    height: 440px;
-                    object-fit: fill;
+	                    border-radius: 33px;
+	                    width: 554px;
+	                    height: 440px;
+	                    position: relative;
+	                    z-index: 0;
+	                    object-fit: fill;
                   "
                 />
                 <div
-                  style="
-                    position: absolute;
-                    bottom: 53px;
+	                  style="
+	                    position: absolute;
+	                    z-index: 1;
+	                    bottom: 53px;
                     right: 18px;
                     width: 368px;
                     display: flex;
