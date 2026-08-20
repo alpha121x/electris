@@ -1,0 +1,1 @@
+#process>div:first-child,#process>div:not(:first-child){width:min(calc(100% - 48px),1216px)!important}@media(max-width:720px){#process>div:first-child,#process>div:not(:first-child){width:calc(100% - 32px)!important}}
