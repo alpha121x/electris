@@ -15,8 +15,141 @@
       rel="stylesheet"
     />
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="process-fix.css" />
-  <link rel="stylesheet" href="process-width-fix.css" />
+  <style>
+    /* Exact desktop spacing from references/test.html. Kept inline so it cannot be replaced by responsive exports. */
+    #process > div:not(:first-child) {
+      width: auto !important;
+      max-width: none !important;
+      margin-left: 148px !important;
+      margin-right: 148px !important;
+      align-self: stretch !important;
+    }
+
+    /* Preserve the Figma-exported pill artwork and dimensions. */
+    #process > div:not(:first-child) > div:first-child {
+      border-radius: 37px !important;
+      padding: 48px 45px !important;
+      background-size: 100% 100% !important;
+    }
+
+    #process > div:not(:first-child) > span {
+      top: -29px !important;
+      left: 97px !important;
+    }
+
+    @media (max-width: 1199px) {
+      #process > div:first-child {
+        margin-left: 48px !important;
+        margin-right: 48px !important;
+      }
+
+      #process > div:not(:first-child) {
+        margin-left: 48px !important;
+        margin-right: 48px !important;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #process {
+        padding-top: 72px !important;
+        padding-bottom: 72px !important;
+      }
+
+      #process > div:first-child,
+      #process > div:not(:first-child) {
+        margin-left: 24px !important;
+        margin-right: 24px !important;
+      }
+
+      #process > div:first-child > div:first-child {
+        padding-right: 0 !important;
+      }
+
+      #process > div:first-child > div:last-child,
+      #process > div:not(:first-child) > div:first-child > div {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+      }
+
+      #process > div:first-child > div:last-child {
+        gap: 18px !important;
+      }
+
+      #process > div:first-child > div:last-child > span:first-child {
+        font-size: 42px !important;
+        line-height: 1.08;
+      }
+
+      #process > div:first-child > div:last-child > span:last-child {
+        width: auto !important;
+        margin-right: 0 !important;
+        font-size: 18px !important;
+        line-height: 1.45;
+      }
+
+      #process > div:not(:first-child) > div:first-child {
+        padding: 42px 24px 28px !important;
+        background-size: cover !important;
+      }
+
+      #process > div:not(:first-child) > div:first-child > div {
+        gap: 20px !important;
+      }
+
+      #process > div:not(:first-child) > div:first-child > div > span {
+        width: auto !important;
+        flex: none !important;
+        font-size: 18px !important;
+        line-height: 1.4;
+      }
+
+      #process > div:not(:first-child) > span {
+        top: -24px !important;
+        left: 72px !important;
+        padding: 5px 28px !important;
+      }
+
+      #process > div:not(:first-child) > span > span {
+        font-size: 20px !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #process {
+        padding-top: 56px !important;
+        padding-bottom: 56px !important;
+      }
+
+      #process > div:first-child,
+      #process > div:not(:first-child) {
+        margin-left: 16px !important;
+        margin-right: 16px !important;
+      }
+
+      #process > div:first-child > div:last-child > span:first-child {
+        font-size: 34px !important;
+      }
+
+      #process > div:first-child > div:last-child > span:last-child {
+        font-size: 16px !important;
+      }
+
+      #process > div:not(:first-child) > div:first-child {
+        border-radius: 24px !important;
+        padding: 38px 18px 24px !important;
+      }
+
+      #process > div:not(:first-child) > span {
+        top: -20px !important;
+        left: 30px !important;
+        padding: 4px 22px !important;
+      }
+
+      #process > div:not(:first-child) > span > span {
+        font-size: 17px !important;
+      }
+    }
+  </style>
   </head>
   <body>
     <div class="site-frame" id="top">
