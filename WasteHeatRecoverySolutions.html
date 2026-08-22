@@ -88,6 +88,58 @@
           font-size: clamp(30px, 7vw, 48px) !important;
         }
       }
+      .service-timeline {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        background-image: radial-gradient(circle, #dbe4f0 1px, transparent 1px);
+        background-position: 0 0;
+        background-size: 52px 52px;
+      }
+      .service-timeline > div {
+        position: relative;
+        z-index: 1;
+      }
+      .service-timeline > div::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        right: -20%;
+        bottom: -1px;
+        left: -20%;
+        border-bottom: 1px solid #bfcaff;
+      }
+      .service-timeline > div:nth-child(-n + 4) > div {
+        box-sizing: border-box;
+        padding: 22px 24px !important;
+        border-bottom: 1px solid #bfcaff;
+      }
+      .service-timeline > div:nth-child(1) > div {
+        border-left: 1px solid #bfcaff;
+        border-bottom-left-radius: 48px;
+      }
+      .service-timeline > div:nth-child(n + 2):nth-child(-n + 4) > div {
+        border-right: 1px solid #bfcaff;
+        border-bottom-right-radius: 48px;
+      }
+      .service-timeline > div:nth-child(5) {
+        box-sizing: border-box;
+        padding: 22px 24px !important;
+        border-right: 1px solid #bfcaff;
+        border-bottom: 1px solid #bfcaff;
+        border-bottom-right-radius: 48px;
+      }
+      @media (max-width: 900px) {
+        .service-timeline {
+          background-image: radial-gradient(circle, #dbe4f0 1px, transparent 1px);
+          background-size: 36px 36px;
+        }
+        .service-timeline > div,
+        .service-timeline > div > div {
+          width: 100% !important;
+          margin: 0 !important;
+        }
+      }
       @media (max-width: 1100px) {
         .wasteheat-hero {
           grid-template-columns: 1fr !important;
@@ -2526,6 +2578,7 @@
               </span>
             </div>
             <div
+              class="service-timeline"
               style="
                 align-self: stretch;
                 display: flex;
