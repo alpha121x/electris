@@ -52,25 +52,8 @@
         backdrop-filter: blur(10px);
         box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
       }
-      /* The three client assets are complete Figma cards (photo + metrics). */
-      .client-results div:has(> .client-result-photo) {
-        aspect-ratio: 1450 / 922;
-        height: auto !important;
-        padding: 0 !important;
-        background: transparent !important;
-        border: 0 !important;
-        overflow: hidden;
-      }
-      .client-results .client-result-photo {
-        position: absolute !important;
-        inset: 0 !important;
-        width: 100% !important;
-        height: 100% !important;
-        border-radius: 32px;
-        object-fit: contain !important;
-      }
-      .client-result-photo + div {
-        display: none !important;
+      .client-result-photo {
+        object-fit: cover !important;
       }
       @media (max-width: 1100px) {
         .wasteheat-hero {
@@ -1613,7 +1596,7 @@
               >
                 <img
                   class="client-result-photo"
-                  src="assets/images/solutions-page/client-airport-final1.png"
+                  src="assets/images/solutions-page/client-airport-final.png"
                   alt="Installation Electris sur un site aéroportuaire"
                   style="
 	                    border-radius: 33px;
@@ -1994,7 +1977,7 @@
                 >
                   <img
                     class="client-result-photo"
-                    src="assets/images/solutions-page/client-leclerc-final1.png"
+                    src="assets/images/solutions-page/client-leclerc-final.png"
                     alt="Façade du magasin E.Leclerc"
                     style="
 	                      border-radius: 32px;
@@ -2185,7 +2168,7 @@
               >
 	                <img
 	                  class="client-result-photo"
-	                  src="assets/images/solutions-page/client-hotel-final1.png"
+	                  src="assets/images/solutions-page/client-hotel-final.png"
 	                  alt="Entrée de l'Hôtel Splendid Étoile"
 	                  style="
 	                    position: absolute;
