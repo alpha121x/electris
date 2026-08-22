@@ -20,6 +20,69 @@
       .wasteheat-legacy-header {
         display: none !important;
       }
+      .wasteheat-hero {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) minmax(520px, 1fr);
+      }
+      .wasteheat-hero-visual {
+        min-width: 0;
+        position: relative;
+      }
+      .wasteheat-hero-art {
+        position: relative;
+        width: 100% !important;
+        min-height: 0;
+        aspect-ratio: 1370 / 883;
+        padding: 0 !important;
+        background-image: url("assets/images/solutions-page/waste-heat-hero.png") !important;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain !important;
+      }
+      .wasteheat-hero-art .wasteheat-metric-savings {
+        position: absolute;
+        top: 8%;
+        left: 0;
+        margin-bottom: 0 !important;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
+      }
+      .wasteheat-metric {
+        background: rgba(255, 255, 255, 0.76) !important;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
+      }
+      @media (max-width: 1100px) {
+        .wasteheat-hero {
+          grid-template-columns: 1fr !important;
+          padding: 48px 32px 72px !important;
+        }
+        .wasteheat-hero-visual {
+          width: min(760px, 100%);
+          margin: 0 auto;
+        }
+      }
+      @media (max-width: 620px) {
+        .wasteheat-hero {
+          padding: 38px 20px 58px !important;
+          gap: 42px !important;
+        }
+        .wasteheat-hero-art .wasteheat-metric-savings,
+        .wasteheat-metric {
+          transform: scale(0.72);
+        }
+        .wasteheat-hero-art .wasteheat-metric-savings {
+          transform-origin: left top;
+        }
+        .wasteheat-metric-roi {
+          transform-origin: right top;
+          right: -10px !important;
+        }
+        .wasteheat-metric-capex {
+          transform-origin: left bottom;
+          left: 15% !important;
+        }
+      }
       @media (max-width: 900px) {
         .client-results {
           display: flex !important;
@@ -448,6 +511,7 @@
           </div>
         </div>
         <div
+          class="wasteheat-hero"
           style="
             align-self: stretch;
             display: flex;
@@ -527,7 +591,7 @@
                   </span>
                 </div>
                 <img
-                  src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/adz5j2ot_expires_30_days.png"
+                  src="assets/images/solutions-page/waste-heat-arrow.png"
                   style="
                     border-radius: 32px;
                     width: 24px;
@@ -541,7 +605,7 @@
               </span>
             </div>
           </div>
-          <div style="flex: 1; align-items: flex-start; position: relative">
+          <div class="wasteheat-hero-visual" style="flex: 1; align-items: flex-start; position: relative">
             <div
               style="
                 align-self: stretch;
@@ -550,16 +614,18 @@
               "
             >
               <div
+                class="wasteheat-hero-art"
                 style="
                   width: 629px;
                   box-sizing: border-box;
                   align-items: flex-start;
                   padding-top: 37px;
-                  background-image: url(&quot;https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/a26h42d5_expires_30_days.png&quot;);
+                  background-image: url(&quot;assets/images/solutions-page/waste-heat-hero.png&quot;);
                   background-size: 100% 100%;
                 "
               >
                 <div
+                  class="wasteheat-metric wasteheat-metric-savings"
                   style="
                     width: 257px;
                     box-sizing: border-box;
@@ -581,7 +647,7 @@
                     "
                   >
                     <img
-                      src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/50lsi69v_expires_30_days.png"
+                      src="assets/images/solutions-page/waste-heat-savings.png"
                       style="width: 21px; height: 21px; object-fit: fill"
                     />
                     <span style="color: #475466; font-size: 15px">
@@ -619,6 +685,7 @@
               </div>
             </div>
             <div
+              class="wasteheat-metric wasteheat-metric-roi"
               style="
                 position: absolute;
                 top: 32px;
@@ -643,7 +710,7 @@
                 "
               >
                 <img
-                  src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/y9kbb6y2_expires_30_days.png"
+                  src="assets/images/solutions-page/waste-heat-roi.png"
                   style="width: 21px; height: 21px; object-fit: fill"
                 />
                 <span style="color: #475466; font-size: 15px">
@@ -658,6 +725,7 @@
               </span>
             </div>
             <div
+              class="wasteheat-metric wasteheat-metric-capex"
               style="
                 position: absolute;
                 bottom: -15px;
@@ -682,7 +750,7 @@
                 "
               >
                 <img
-                  src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/488m5lvc_expires_30_days.png"
+                  src="assets/images/solutions-page/waste-heat-capex.png"
                   style="width: 21px; height: 21px; object-fit: fill"
                 />
                 <span style="color: #475466; font-size: 15px">
