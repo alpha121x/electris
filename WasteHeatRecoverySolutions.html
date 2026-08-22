@@ -72,6 +72,19 @@
       .client-result-photo + div {
         display: none !important;
       }
+      .reference-section-title {
+        font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+        font-weight: 700 !important;
+        letter-spacing: -0.035em;
+        line-height: 1.12;
+        white-space: nowrap;
+      }
+      @media (max-width: 900px) {
+        .reference-section-title {
+          white-space: normal;
+          font-size: clamp(30px, 7vw, 48px) !important;
+        }
+      }
       @media (max-width: 1100px) {
         .wasteheat-hero {
           grid-template-columns: 1fr !important;
@@ -941,6 +954,7 @@
                     >Indépendance énergétique</span
                   >
                   <span
+                    class="reference-section-title"
                     style="
                       color: #1f252e;
                       font-size: 48px;
@@ -948,8 +962,7 @@
                       margin-right: 102px;
                     "
                   >
-                    Pourquoi cela signifie indépendance<br />
-                    ?
+                    Pourquoi cela signifie indépendance ?
                   </span>
                   <span style="color: #475569; font-size: 24px; width: 878px">
                     Chaque kWh récupéré = 1 kWh de gaz en moins = 1 euro qui
@@ -1226,9 +1239,8 @@
                 gap: 9px;
               "
             >
-              <span style="color: #000000; font-size: 48px; font-weight: bold">
-                Comment fonctionne la récupération de chaleur<br />
-                ?
+              <span class="reference-section-title" style="color: #000000; font-size: 48px; font-weight: bold">
+                Comment fonctionne la récupération de chaleur ?
               </span>
               <div
                 style="
@@ -1316,8 +1328,8 @@
               "
             >
               <span style="color: #475569; font-size: 24px">Secteurs</span>
-              <span style="color: #1f252e; font-size: 48px; font-weight: bold">
-                6 secteurs où ELECTRIS intervient<br />.
+              <span class="reference-section-title" style="color: #1f252e; font-size: 48px; font-weight: bold">
+                6 secteurs où ELECTRIS intervient.
               </span>
             </div>
             <div
@@ -1805,9 +1817,10 @@
                   style="width: 58px; height: 64px; object-fit: fill"
                 />
                 <span
+                  class="reference-section-title"
                   style="color: #000000; font-size: 48px; font-weight: bold"
                 >
-                  Résultats obtenus pour nos clients<br />.
+                  Résultats obtenus pour nos clients.
                 </span>
               </div>
               <div
@@ -2505,8 +2518,8 @@
               <span style="color: #475569; font-size: 24px">
                 Mise en service
               </span>
-              <span style="color: #000000; font-size: 48px; font-weight: bold">
-                De l&#39;audit à la mise en service - 5 étapes<br />.
+              <span class="reference-section-title" style="color: #000000; font-size: 48px; font-weight: bold">
+                De l&#39;audit à la mise en service - 5 étapes.
               </span>
             </div>
             <div
